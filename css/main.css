@@ -1,0 +1,370 @@
+html, body {
+    height: 100%;
+    margin: 0 auto;
+}
+
+.attribution{
+    color: white;
+    padding-bottom: 1%;
+}
+
+#close{
+    cursor: pointer;
+}
+
+body {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    background: -webkit-radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 5%;
+}
+
+.box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.scoreboard{
+    border: hsl(217, 16%, 45%) 2px solid;
+    border-radius: 10px;
+    width: 60%;
+    margin-top: 2%;
+}
+
+.score{
+    background-color: white;
+    border: white 2px solid;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 35%;
+    height: 50%;
+    margin: 5%;
+}
+
+.scoretext{
+    color: hsl(229, 64%, 46%);
+    font-size: 18px;
+    margin-bottom: 0;
+}
+
+.scorenumber{
+    color: hsl(229, 25%, 31%);
+    font-size: 24px;
+    margin-top: 0;
+}
+
+ul{
+    list-style: none;
+    color: white;
+    font-size: 1.5em;
+}
+
+.game{
+    background: url(/images/bg-triangle.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50%;
+    width: 60%;
+    height: auto;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.rock{
+    border: hsl(349, 70%, 56%) 20px solid;
+    background-color: lightgray;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    box-shadow: 0 5px 0 0 hsl(349, 71%, 52%);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor: pointer;
+}
+
+.paper{
+    border: hsl(230, 89%, 65%) 20px solid;
+    background-color: lightgray;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    box-shadow: 0 5px 0 0 hsl(230, 89%, 62%);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor: pointer;
+}
+
+.scissors{
+    border: hsl(40, 84%, 53%) 20px solid;
+    background-color: lightgray;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    box-shadow: 0 5px 0 0 hsl(39, 89%, 49%);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor: pointer;
+}
+
+.scissors:hover, :focus{
+    transform: scale(1.1);
+}
+.rock:hover, :focus{
+    transform: scale(1.1);
+}
+.paper:hover, :focus{
+    transform: scale(1.1);
+}
+
+.first-line{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 10%;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.second-line{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 5%;
+}
+
+.rules {
+    width: 100%;
+    padding-top: 5%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#rules{
+    cursor: pointer;
+}
+
+
+.btn{
+    background: -webkit-radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+    color: white;
+    border: hsl(217, 16%, 45%) 2px solid;
+    border-radius: 10px;
+    justify-content: flex-end;
+    padding: 1%;
+}
+
+.modalRules{
+    display: none;
+    background-color: rgba(38, 38, 38, 0.89);
+    position: absolute;
+    top: 0;
+    margin: 0 auto;
+    width: 100%;
+    height: 122%;
+}
+
+.modalRules img{
+    width: 100%;
+    height: auto;
+}
+
+.rulesimage{
+    width: 33.33%;
+    border: hsl(218, 100%, 98%) 2px solid;
+    border-radius: 10px;
+    background-color: white;
+    text-align: center;
+    position: absolute;
+    top: 10%;
+    left: 31%;
+    padding: 2%;
+}
+
+.rulesimagehead{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:center;
+}
+
+.picked{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+    color: white;
+}
+
+#picked{
+    display: none;
+}
+
+.result{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 33.33%;
+}
+
+#result div {
+    cursor: pointer;
+}
+
+.yourpick{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    width: 33.33%;
+}
+
+.housepick{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    width: 33.33%;
+}
+
+.circle{
+    border: rgba(38, 38, 38, 0.76) 50px solid;
+    border-radius: 50%;
+    margin-top: 10%;
+}
+
+.playAgain{
+    border: white 2px solid;
+    background-color: white;
+    border-radius: 10px;
+    color: hsl(349, 70%, 56%);
+    padding: 5%;
+}
+
+
+.winCircles{
+    z-index: -50;
+    border-radius: 50%;
+    box-shadow: 0 0 0 35px rgba(3, 57, 3, 0.19),0 0 0 90px rgba(17, 50, 4, 0.15), 0 0 0 150px rgba(3, 57, 3, 0.19);
+}
+
+.loseCircles{
+    z-index: -50;
+    border-radius: 50%;
+    box-shadow: 0 0 0 35px rgba(47, 9, 2, 0.15) ,0 0 0 90px rgba(49, 10, 2, 0.09), 0 0 0 150px rgba(47, 9, 2, 0.15);
+}
+
+@media (max-width: 900px) {
+
+    .scissors{
+        width: 75px;
+        height: 75px;
+    }
+    .rock{
+        width: 75px;
+        height: 75px;
+    }
+    .paper{
+        width: 75px;
+        height: 75px;
+    }
+    .circle{
+        border: rgba(38, 38, 38, 0.76) 35px solid;
+    }
+}
+
+@media (max-width: 750px) {
+
+    .scissors{
+        width: 50px;
+        height: 50px;
+        background: hsl(40, 84%, 53%);
+    }
+    .rock{
+        width: 50px;
+        height: 50px;
+        background: hsl(349, 70%, 56%);
+    }
+    .paper{
+        width: 50px;
+        height: 50px;
+        background: hsl(230, 89%, 65%);
+    }
+}
+
+@media (max-width: 600px) {
+    .game{
+        width: 65%;
+    }
+    .scissors{
+        width: 30px;
+        height: 30px;
+    }
+    .rock{
+        width: 30px;
+        height: 30px;
+    }
+    .paper{
+        width: 30px;
+        height: 30px;
+    }
+    .circle{
+        border: rgba(38, 38, 38, 0.76) 25px solid;
+    }
+}
+
+@media (max-width: 400px) {
+    .score{
+        margin: 5%;
+    }
+    .scoretext{
+        font-size: 16px;
+    }
+    ul{
+        font-size: 1em;
+    }
+    .game{
+        width: 90%;
+    }
+    .scissors{
+        width: 30px;
+        height: 30px;
+    }
+    .rock{
+        width: 30px;
+        height: 30px;
+    }
+    .paper{
+        width: 30px;
+        height: 30px;
+    }
+
+    h2{
+        font-size: 0.8em;
+    }
+    h4{
+        font-size: 0.8em;
+    }
+    .picked{
+        width: 100%;
+    }
+    .circle{
+        border: rgba(38, 38, 38, 0.76) 25px solid;
+    }
+
+
+}
