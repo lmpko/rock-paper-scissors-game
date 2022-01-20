@@ -4,8 +4,18 @@ html, body {
 }
 
 .attribution{
+    color: gray;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 1%;
+    padding: 1%;
+    padding-right: 4%;
+}
+
+.attribution a{
     color: white;
-    padding-bottom: 1%;
+    padding: 0 0 0 5px;
 }
 
 #close{
@@ -73,7 +83,7 @@ ul{
     background: url(/images/bg-triangle.svg);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 50%;
+    background-size: 40%;
     width: 60%;
     height: auto;
     padding: 2%;
@@ -107,6 +117,7 @@ ul{
     align-items:center;
     justify-content:center;
     cursor: pointer;
+    margin-right: 15%;
 }
 
 .scissors{
@@ -135,10 +146,8 @@ ul{
 .first-line{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     padding-bottom: 10%;
-    padding-left: 20%;
-    padding-right: 20%;
 }
 
 .second-line{
@@ -150,7 +159,6 @@ ul{
 
 .rules {
     width: 100%;
-    padding-top: 5%;
     display: flex;
     justify-content: flex-end;
 }
